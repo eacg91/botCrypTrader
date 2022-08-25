@@ -18,10 +18,10 @@ def cmd_start(message):
 def bot_mensajes_texto(message):
 	if message.text.startswith("/"):
 		comand = message.text.split('/')[1]
-		#txt = "Dona Bitcoin si te gusta el programa"
 		txt = " {} USD".format( convert2(1,comand,'USD') )
 		#if command.startswith("convert") == ""
-		bot.send_message(message.chat.id,txt)
+		#bot.send_message(message.chat.id,txt)
+		bot.reply_to(message,txt)
 
 crypto = crypto()
 hilo = threading.Thread(target=test)
