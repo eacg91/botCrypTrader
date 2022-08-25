@@ -1,1 +1,1 @@
-TELEGRAM_TOKEN = "tt"
+TELEGRAM_TOKEN = ""
