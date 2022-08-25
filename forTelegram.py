@@ -1,5 +1,5 @@
 from config import * #Importamos el token de config.py en el mismo directorio
-from index import *
+from backend import *
 import telebot
 import threading
 
