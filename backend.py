@@ -84,18 +84,18 @@ def get_address_balance(network,address) :
 
 def test():
 	print( "Inicia programa {}".format(time.strftime("%c")) )
-	confirmed_balance = get_address_balance('BTC','14HprKtenqJWyMqT236J7i7DN5TArAiQLD')['confirmed_balance']
+	confirmed_balance = 0 #get_address_balance('BTC','14HprKtenqJWyMqT236J7i7DN5TArAiQLD')['confirmed_balance']
 	while get_allBooks() :
 		dateInfo = crypto.allBooks['btc_mxn']['created_at']
 		dateInfo = dateInfo.split('T')[0] +" "+ dateInfo.split('T')[1].split('+')[0]
 		print(f"\n*******\n Hora de Bitso {dateInfo}")
 		#print(crypto.allBooks['btc_mxn']) #imprime el JSON obtenido
+		convert2(1,'USD','MXN')
+		convert2(1,'BTC','MXN')
 		convert2(1,'BTC','USD')
 		convert2(1,'ETH','USD')
 		convert2(1,'APE','USD')
 		convert2(1,'AAVE','USD')
-		convert2(1,'USD','MXN')
-		convert2(float(confirmed_balance),'BTC','mxn')
 		#for x in crypto.allBooks :
 		 #   print( "{}) 1 {} = {} {} ".format(x,x.split('_')[0].upper(),crypto.allBooks[x]['last'],x.split('_')[1].upper()) )
 		time.sleep(1)
